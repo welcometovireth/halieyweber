@@ -16,6 +16,7 @@
 
   --font-head: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Quicksand', 'Trebuchet MS', sans-serif;
+  --font-script: 'Caveat', cursive;
 }
 
 * { box-sizing: border-box; }
@@ -83,13 +84,27 @@ h3 { font-size: 1.5rem; }
 }
 
 .brand {
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
   color: var(--brown);
 }
 
-.brand span { color: var(--rose-deep); }
+.brand .brand-script {
+  font-family: var(--font-script);
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.brand .brand-sc {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-top: 0.15rem;
+}
 
 .nav-links {
   list-style: none;
@@ -168,6 +183,40 @@ h3 { font-size: 1.5rem; }
 /* ---------- Hero ---------- */
 .hero {
   padding: 4rem 0 3rem;
+}
+
+.hero-motes {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--cream-deep), var(--rose) 150%);
+}
+
+.hero-motes .mote-beam {
+  position: absolute;
+  inset: -20% -10%;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,251,235,0.35) 48%, transparent 62%);
+  pointer-events: none;
+}
+
+.hero-motes .mote {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,248,232,0.95), rgba(255,248,232,0));
+  filter: blur(0.3px);
+  opacity: 0;
+  animation: moteDrift ease-in-out infinite;
+}
+
+@keyframes moteDrift {
+  0%   { opacity: 0; transform: translate(0, 20px); }
+  15%  { opacity: 0.8; }
+  50%  { transform: translate(var(--mx, 20px), -20px); }
+  85%  { opacity: 0.6; }
+  100% { opacity: 0; transform: translate(var(--mx2, -10px), -60px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-motes .mote { animation: none; opacity: 0.35; }
 }
 
 .hero-grid {
