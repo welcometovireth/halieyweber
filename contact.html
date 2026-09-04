@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Haliey M. Weber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">Haliey <span>M. Weber</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="audiobooks.html">Audiobooks</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container" style="max-width:760px;">
+      <span class="eyebrow">Get In Touch</span>
+      <h1>Contact</h1>
+      <p class="hero-tagline">For casting, bookings, and audiobook inquiries — reach out directly or through representation below.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container contact-grid">
+      <div>
+        <div class="edit-note"><strong>Note:</strong> the form below opens the visitor's email app pre-filled to <code>hello@halieymweber.com</code> — swap in your real email address in <code>js/main.js</code>, or connect a form service (like Formspree) once you're ready to go live.</div>
+        <form id="contact-form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="reason">Reason for Reaching Out</label>
+            <input type="text" id="reason" name="reason" placeholder="Casting, audiobook project, booking, etc.">
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="rep-card">
+          <span class="eyebrow">Representation</span>
+          <h3>Big Fish NW Talent Representation</h3>
+          <p>877.424.4347<br><a href="http://www.bigfishnw.com" target="_blank" rel="noopener">www.bigfishnw.com</a></p>
+        </div>
+        <div class="rep-card">
+          <span class="eyebrow">Find Me Elsewhere</span>
+          <p>Add your profile links (IMDb, Actors Access, Backstage, Instagram) here once you have them handy.</p>
+          <div class="social-links">
+            <a href="#">IMDb</a>
+            <a href="#">Actors Access</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Haliey M. Weber</div>
+        <p>Actor &middot; Voiceover &middot; Audiobook Narrator</p>
+      </div>
+      <div>
+        <p><strong>Representation</strong><br>Big Fish NW Talent Representation<br>877.424.4347</p>
+      </div>
+      <div>
+        <p><a href="contact.html">Contact</a><br><a href="resume.html">Resume</a><br><a href="blog/index.html">Blog</a></p>
+      </div>
+    </div>
+    <p class="footer-note">&copy; 2026 Haliey M. Weber. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
